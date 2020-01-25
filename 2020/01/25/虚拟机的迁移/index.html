@@ -49,36 +49,19 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
 </script>
-  <meta name="description" content="Docker">
+  <meta name="description" content="KVM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker的私有仓库">
-<meta property="og:url" content="http://yoursite.com/2020/01/25/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/index.html">
+<meta property="og:title" content="虚拟机的迁移">
+<meta property="og:url" content="http://yoursite.com/2020/01/25/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB/index.html">
 <meta property="og:site_name" content="派大星の博客">
-<meta property="og:description" content="Docker">
+<meta property="og:description" content="KVM">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2020011611433816.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTYzNjcwMg==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200116114438273.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTYzNjcwMg==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
 <meta property="article:published_time" content="2020-01-24T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-01-25T08:50:23.106Z">
+<meta property="article:modified_time" content="2020-01-25T12:43:14.565Z">
 <meta property="article:author" content="派大星">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
 
-<link rel="canonical" href="http://yoursite.com/2020/01/25/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/">
+<link rel="canonical" href="http://yoursite.com/2020/01/25/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB/">
 
 
 <script id="page-configurations">
@@ -90,7 +73,7 @@
   };
 </script>
 
-  <title>Docker的私有仓库 | 派大星の博客</title>
+  <title>虚拟机的迁移 | 派大星の博客</title>
   
 
 
@@ -208,7 +191,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/25/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/25/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -221,7 +204,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Docker的私有仓库
+          虚拟机的迁移
         </h1>
 
         <div class="post-meta">
@@ -232,7 +215,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-25 00:00:00 / 修改时间：16:50:23" itemprop="dateCreated datePublished" datetime="2020-01-25T00:00:00+08:00">2020-01-25</time>
+              <time title="创建时间：2020-01-25 00:00:00 / 修改时间：20:43:14" itemprop="dateCreated datePublished" datetime="2020-01-25T00:00:00+08:00">2020-01-25</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -240,8 +223,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Docker/" itemprop="url" rel="index">
-                    <span itemprop="name">Docker</span>
+                  <a href="/categories/KVM/" itemprop="url" rel="index">
+                    <span itemprop="name">KVM</span>
                   </a>
                 </span>
             </span>
@@ -259,7 +242,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.4k</span>
+              <span>2.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -268,7 +251,7 @@
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               <span>4 分钟</span>
             </span>
-            <div class="post-description">Docker</div>
+            <div class="post-description">KVM</div>
 
         </div>
       </header>
@@ -279,64 +262,44 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Registry"><a href="#Registry" class="headerlink" title="Registry"></a><strong>Registry</strong></h1><p>用docker容器运行registry私有仓库</p>
-<p>下载registry镜像：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker  pull  registry:2  &#x2F;&#x2F;2版本是使用go语言编写的，而registry是使用python写的</span><br></pre></td></tr></table></figure>
+        <p>虚拟机的迁移：</p>
+<p>冷迁移（静态迁移）：  //服务器需要关闭<br>kvm01：192.168.1.100<br>kvm02：192.168.1.200</p>
+<p>两台机器防火墙全部关闭，禁用selinux</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# lsmod |  grep  kvm  &#x2F;&#x2F;查看是否支持kvm</span><br><span class="line">[root@localhost ~]# systemctl  status  libvirtd  &#x2F;&#x2F;查看libvirtd服务是否正常</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>//运行私有仓库：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker run -itd --name registry --restart&#x3D;always -p 5000:5000 -v &#x2F;registry:&#x2F;var&#x2F;lib&#x2F;registry registry:2</span><br></pre></td></tr></table></figure>
+<p>//迁移和克隆差不多，都是需要对磁盘文件和xml配置文件进行操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# scp  &#x2F;etc&#x2F;libvirt&#x2F;qemu&#x2F;test01.xml root@192.168.1.200:&#x2F;etc&#x2F;libvirt&#x2F;qemu </span><br><span class="line">[root@kvm01 ~]# scp  &#x2F;kvm-vm&#x2F;centos.raw   root@192.168.1.200:&#x2F;kvm-vm&#x2F;</span><br><span class="line">[root@kvm02 ~]# virsh  define   &#x2F;etc&#x2F;libvirt&#x2F;qemu&#x2F;test01.xml</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>-p：端口映射（宿主机端口：容器暴露的端口）</p>
-<p>-v：挂载目录（宿主机的目录：容器内的目录）</p>
-<p>镜像重命名：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker tag test-web:latest  192.168.1.70:5000&#x2F;test</span><br></pre></td></tr></table></figure>
+<p>热迁移（动态迁移）：<br>删除所有的KVM虚拟机<br>kvm01：192.168.1.100<br>kvm02：192.168.1.200<br>NFS：192.168.1.129</p>
+<p>1）在NFS服务器上面操作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@NFS ~]# yum  -y  install  nfs-utils</span><br><span class="line">[root@NFS ~]# mkdir &#x2F;kvmshare  &#x2F;&#x2F;创建共享文件夹</span><br><span class="line">[root@NFS ~]# vim  &#x2F;etc&#x2F;exports  &#x2F;&#x2F;编辑共享文件夹权限</span><br><span class="line">[root@NFS ~]# cat &#x2F;etc&#x2F;exports</span><br><span class="line">&#x2F;kvmshare  *(rw,sync,no_root_squash)</span><br><span class="line">[root@NFS ~]# systemctl  start  rpcbind  &#x2F;&#x2F;远程传输控制协议</span><br><span class="line">[root@NFS ~]# systemctl  enable  rpcbind</span><br><span class="line">[root@NFS ~]# systemctl  start  nfs-server</span><br><span class="line">[root@NFS ~]# systemctl  enable  nfs-server</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>上传镜像到私有仓库：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# vim  &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;docker.service</span><br><span class="line">修改：指定私有仓库地址</span><br><span class="line">ExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;dockerd --insecure-registry 192.168.1.70:5000</span><br><span class="line">[root@localhost ~]# systemctl  daemon-reload </span><br><span class="line">[root@localhost ~]# systemctl  restart  docker</span><br><span class="line">[root@localhost ~]# docker push  192.168.1.70:5000&#x2F;test:latest</span><br></pre></td></tr></table></figure>
+<p>//确保两台KVM服务器能看到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# showmount  -e  192.168.1.129</span><br><span class="line">[root@kvm02 ~]# showmount  -e  192.168.1.129</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这里注意，既然是私有仓库，肯定是要考虑多台DockerHost共用的情况，如果有其他的DockerHost想要使用私有仓库，仅需要修改docker的配置文件，指定私有仓库的IP和端口即可。当然别忘了，更改过配置文件之后，daemon-reload ,restart docker服务</p>
-<h1 id="企业级私有仓库镜像Harbor"><a href="#企业级私有仓库镜像Harbor" class="headerlink" title="企业级私有仓库镜像Harbor"></a><strong>企业级私有仓库镜像Harbor</strong></h1><p>下载一个docker-compse工具</p>
-<p>//从GitHub上下载方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@docker01 ~]# curl -L https:&#x2F;&#x2F;github.com&#x2F;docker&#x2F;compose&#x2F;releases&#x2F;download&#x2F;1.25.0&#x2F;docker-compose-&#96;uname -s&#96;-&#96;uname -m&#96; -o &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-compose</span><br><span class="line">[root@docker01 ~]# chmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-compose</span><br></pre></td></tr></table></figure>
+<p>2）KVM01上基于NFS服务创建虚拟机<br>添加新的存储池：<br>名称：nfsshare<br>类型：netfs<br>目标路径：/opt/nfsshare（本机挂在的目录，目录默认没有，但会自己创建）<br>主机名:192.168.1.129（nfs-server IP address）<br>源路径：/kvmshare（nfs-server上的共享目录）</p>
+<p>验证nfs服务是否正常：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# touch    &#x2F;opt&#x2F;nfsshare&#x2F;test</span><br><span class="line">[root@NFS ~]# ls  &#x2F;kvmshare&#x2F;</span><br><span class="line">test</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@docker01 ~]# tar zxf docker-compose.tar.gz  -C  &#x2F;usr&#x2F;local&#x2F;bin</span><br><span class="line">[root@docker01 ~]# chmod  +x  &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-compose</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>//下载依赖包</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@docker01 ~]# yum  -y  install  yum-utils  device-mapper-persistent-data  lvm2</span><br></pre></td></tr></table></figure>
+<p>创建存储卷：<br>名称：centos7<br>最大容量：10G</p>
+<p>//存储池和存储卷完成之后，直接创建虚拟机，并最小化安装<br>选择之前的创建的iso镜像以及刚才创建的存储池和存储卷</p>
+<p>配置虚拟机使用bridge桥接网络，使其能够ping通外网，并且在这里我们执行一个ping百度的命令，并让他保持一直是ping着的状态，用来模拟迁移到kvm02上服务不中断：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# virsh  destroy  centos7.0</span><br><span class="line">[root@kvm01 ~]# systemctl  stop  NetworkManager</span><br><span class="line">[root@kvm01 ~]# virsh  iface-bridge ens33  br0</span><br><span class="line">[root@kvm01 ~]# virsh  edit  centos7.0</span><br><span class="line">&lt;interface type&#x3D;&#39;bridge&#39;&gt;</span><br><span class="line">&lt;mac address&#x3D;&#39;52:54:00:12:80:97&#39;&#x2F;&gt;</span><br><span class="line">&lt;source bridge&#x3D;&#39;br0&#39;&#x2F;&gt;</span><br><span class="line">[root@kvm01 ~]# virsh  start  centos7.0</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>//导入harbo离线安装包，并解压到/usr/local/下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@docker01 ~]# tar zxf harbor-offline-installer-v1.7.4.tgz -C &#x2F;usr&#x2F;local&#x2F;</span><br></pre></td></tr></table></figure>
+<p>配置IP为DHCP自动获取</p>
+<p>在KVM02上操作，创建存储池：<br>名称：nfsshare<br>类型：netfs<br>目标路径：/opt/nfsshare（本机挂在的目录，目录默认没有，但会自己创建）<br>主机名:192.168.1.129（nfs-server IP address）<br>源路径：/kvmshare（nfs-server上的共享目录）<br>创建完之后会看到之前在KVM01上创建的test文件和centos.qcow2的存储卷</p>
+<p>在KVM01上连接KVM02：<br>右上角—文件—添加连接—连接到远程主机—方法：ssh—用户名：root—-主机名：192.168.1.200（KVM02的IP）<br>会提示安装openssh-askpass，直接在KVM01和KVm02上安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# yum  -y  install  openssh-askpass</span><br><span class="line">[root@kvm02 ~]# yum  -y  install  openssh-askpass</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>//安装harbor</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@docker01 ~]# cd  &#x2F;usr&#x2F;local&#x2F;harbor&#x2F;</span><br><span class="line">[root@docker01 harbor]# vim  harbor.cfg</span><br><span class="line">hostname &#x3D; 192.168.1.70</span><br><span class="line">[root@docker01 harbor]# .&#x2F;install.sh</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>//浏览器访问：192.168.1.70</p>
-<p>用户名：admin</p>
-<p>密码：Harbor12345</p>
-<p><img src="https://img-blog.csdnimg.cn/2020011611433816.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTYzNjcwMg==,size_16,color_FFFFFF,t_70" alt="img">)<img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>//修改docker配置文件，连接Harbor私有仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@docker01 ~]# vim  &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;docker.service</span><br><span class="line">ExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;dockerd  --insecure-registry  192.168.1.70</span><br><span class="line">[root@docker01 ~]# systemctl  daemon-reload </span><br><span class="line">[root@docker01 ~]# systemctl  restart  docker</span><br></pre></td></tr></table></figure>
+<p>//因为KVM01使用的是bridge br0网卡，所以我们需要在KVM02上创建同样的网卡br0，用来支持虚拟机</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm02 ~]# systemctl  stop  NetworkManager</span><br><span class="line">[root@kvm02 ~]# virsh  iface-bridge  ens33  br0</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>//创建私有仓库</p>
-<p><img src="https://img-blog.csdnimg.cn/20200116114438273.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTYzNjcwMg==,size_16,color_FFFFFF,t_70" alt="img">)<img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>//登录仓库上传镜像</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@docker01 harbor]# docker login  -u  admin -p  Harbor12345  192.168.1.70</span><br><span class="line">[root@docker01 harbor]# docker tag  centos:7  192.168.1.70&#x2F;bdqn&#x2F;centos:7</span><br><span class="line">[root@docker01 harbor]# docker push  192.168.1.70&#x2F;bdqn&#x2F;centos:7</span><br></pre></td></tr></table></figure>
+<p>接下来直接在virt-manager管理器中迁移就可以了，迁移完成之后，保证我么的ping命令是不中断的，就表示实验完成了<br>右键centos7.0—迁移—地址：192.168.1.200（KVM02的IP）—高级选项—-勾选允许不可靠—-迁移<br>如果出现错误解决办法：<br>把KVM01和KVM02上挂载的目录给一个777的权限，保证双方root用户有权限调用目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# chmod  777  &#x2F;opt&#x2F;</span><br><span class="line">[root@kvm02 ~]# chmod  777  &#x2F;opt&#x2F;</span><br></pre></td></tr></table></figure>
 
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>//从私有仓库下载镜像</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@docker03 ~]# docker pull  192.168.1.70&#x2F;bdqn&#x2F;centos:7</span><br></pre></td></tr></table></figure>
-
-<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>迁移完成后在KVM02上面查看ping命令是否中断</p>
 
     </div>
 
@@ -370,12 +333,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/01/25/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83/" rel="prev" title="Docker部署LNMP环境">
-      <i class="fa fa-chevron-left"></i> Docker部署LNMP环境
+    <a href="/2020/01/25/KVM%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/" rel="prev" title="KVM基本操作命令">
+      <i class="fa fa-chevron-left"></i> KVM基本操作命令
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/01/25/Docker%E7%9A%84%E7%9B%91%E6%8E%A7/" rel="next" title="Docker的监控">
-      Docker的监控 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/01/25/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%85%8B%E9%9A%86/" rel="next" title="虚拟机的克隆">
+      虚拟机的克隆 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -436,7 +399,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Registry"><span class="nav-text">Registry</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#企业级私有仓库镜像Harbor"><span class="nav-text">企业级私有仓库镜像Harbor</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
