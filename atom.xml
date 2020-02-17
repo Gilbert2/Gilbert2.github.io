@@ -5,9 +5,9 @@
   <subtitle>记录生活中的点点滴滴</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://pdxblog.top/"/>
   <updated>2020-02-17T07:16:38.374Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://pdxblog.top/</id>
   
   <author>
     <name>派大星</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>ConfigMap、Secret</title>
-    <link href="http://yoursite.com/2020/02/17/ConfigMap%E3%80%81Secret/"/>
-    <id>http://yoursite.com/2020/02/17/ConfigMap%E3%80%81Secret/</id>
+    <link href="http://pdxblog.top/ConfigMap%E3%80%81Secret.html"/>
+    <id>http://pdxblog.top/ConfigMap%E3%80%81Secret.html</id>
     <published>2020-02-16T16:00:00.000Z</published>
     <updated>2020-02-17T07:16:38.374Z</updated>
     
@@ -32,17 +32,17 @@
     </summary>
     
     
-      <category term="k8s" scheme="http://yoursite.com/categories/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/categories/k8s/"/>
     
     
-      <category term="k8s" scheme="http://yoursite.com/tags/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/tags/k8s/"/>
     
   </entry>
   
   <entry>
     <title>StatefulSet</title>
-    <link href="http://yoursite.com/2020/02/12/StatefulSet/"/>
-    <id>http://yoursite.com/2020/02/12/StatefulSet/</id>
+    <link href="http://pdxblog.top/StatefulSet.html"/>
+    <id>http://pdxblog.top/StatefulSet.html</id>
     <published>2020-02-11T16:00:00.000Z</published>
     <updated>2020-02-14T03:25:48.428Z</updated>
     
@@ -55,17 +55,17 @@
     </summary>
     
     
-      <category term="k8s" scheme="http://yoursite.com/categories/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/categories/k8s/"/>
     
     
-      <category term="k8s" scheme="http://yoursite.com/tags/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/tags/k8s/"/>
     
   </entry>
   
   <entry>
     <title>k8s的存储类</title>
-    <link href="http://yoursite.com/2020/02/11/k8s%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB/"/>
-    <id>http://yoursite.com/2020/02/11/k8s%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB/</id>
+    <link href="http://pdxblog.top/k8s%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB.html"/>
+    <id>http://pdxblog.top/k8s%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB.html</id>
     <published>2020-02-10T16:00:00.000Z</published>
     <updated>2020-02-12T07:04:51.200Z</updated>
     
@@ -78,17 +78,17 @@
     </summary>
     
     
-      <category term="k8s" scheme="http://yoursite.com/categories/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/categories/k8s/"/>
     
     
-      <category term="k8s" scheme="http://yoursite.com/tags/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/tags/k8s/"/>
     
   </entry>
   
   <entry>
     <title>k8s数据持久化</title>
-    <link href="http://yoursite.com/2020/02/10/k8s%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/"/>
-    <id>http://yoursite.com/2020/02/10/k8s%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/</id>
+    <link href="http://pdxblog.top/k8s%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96.html"/>
+    <id>http://pdxblog.top/k8s%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96.html</id>
     <published>2020-02-10T08:53:18.320Z</published>
     <updated>2020-02-14T03:50:17.919Z</updated>
     
@@ -101,17 +101,17 @@
     </summary>
     
     
-      <category term="k8s" scheme="http://yoursite.com/categories/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/categories/k8s/"/>
     
     
-      <category term="k8s" scheme="http://yoursite.com/tags/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/tags/k8s/"/>
     
   </entry>
   
   <entry>
     <title>Docker swarm</title>
-    <link href="http://yoursite.com/2020/01/25/Docker%20swarm/"/>
-    <id>http://yoursite.com/2020/01/25/Docker%20swarm/</id>
+    <link href="http://pdxblog.top/Docker%20swarm.html"/>
+    <id>http://pdxblog.top/Docker%20swarm.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-02-02T09:31:18.463Z</updated>
     
@@ -124,17 +124,17 @@
     </summary>
     
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Docker架构+Docker镜像分层+Dockerfile</title>
-    <link href="http://yoursite.com/2020/01/25/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile/"/>
-    <id>http://yoursite.com/2020/01/25/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile/</id>
+    <link href="http://pdxblog.top/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html"/>
+    <id>http://pdxblog.top/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.224Z</updated>
     
@@ -147,17 +147,17 @@
     </summary>
     
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Docker的底层原理</title>
-    <link href="http://yoursite.com/2020/01/25/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/"/>
-    <id>http://yoursite.com/2020/01/25/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86/</id>
+    <link href="http://pdxblog.top/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html"/>
+    <id>http://pdxblog.top/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.240Z</updated>
     
@@ -170,17 +170,17 @@
     </summary>
     
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Docker的基本操作命令</title>
-    <link href="http://yoursite.com/2020/01/25/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
-    <id>http://yoursite.com/2020/01/25/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/</id>
+    <link href="http://pdxblog.top/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4.html"/>
+    <id>http://pdxblog.top/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.240Z</updated>
     
@@ -193,17 +193,17 @@
     </summary>
     
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Docker的监控</title>
-    <link href="http://yoursite.com/2020/01/25/Docker%E7%9A%84%E7%9B%91%E6%8E%A7/"/>
-    <id>http://yoursite.com/2020/01/25/Docker%E7%9A%84%E7%9B%91%E6%8E%A7/</id>
+    <link href="http://pdxblog.top/Docker%E7%9A%84%E7%9B%91%E6%8E%A7.html"/>
+    <id>http://pdxblog.top/Docker%E7%9A%84%E7%9B%91%E6%8E%A7.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.256Z</updated>
     
@@ -216,17 +216,17 @@
     </summary>
     
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>Docker的私有仓库</title>
-    <link href="http://yoursite.com/2020/01/25/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/"/>
-    <id>http://yoursite.com/2020/01/25/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93/</id>
+    <link href="http://pdxblog.top/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html"/>
+    <id>http://pdxblog.top/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.256Z</updated>
     
@@ -239,17 +239,17 @@
     </summary>
     
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>KVM基本操作命令</title>
-    <link href="http://yoursite.com/2020/01/25/KVM%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/"/>
-    <id>http://yoursite.com/2020/01/25/KVM%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4/</id>
+    <link href="http://pdxblog.top/KVM%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4.html"/>
+    <id>http://pdxblog.top/KVM%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.334Z</updated>
     
@@ -262,17 +262,17 @@
     </summary>
     
     
-      <category term="KVM" scheme="http://yoursite.com/categories/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/categories/KVM/"/>
     
     
-      <category term="KVM" scheme="http://yoursite.com/tags/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/tags/KVM/"/>
     
   </entry>
   
   <entry>
     <title>KVM磁盘格式</title>
-    <link href="http://yoursite.com/2020/01/25/KVM%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/01/25/KVM%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F/</id>
+    <link href="http://pdxblog.top/KVM%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F.html"/>
+    <id>http://pdxblog.top/KVM%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.318Z</updated>
     
@@ -285,17 +285,17 @@
     </summary>
     
     
-      <category term="KVM" scheme="http://yoursite.com/categories/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/categories/KVM/"/>
     
     
-      <category term="KVM" scheme="http://yoursite.com/tags/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/tags/KVM/"/>
     
   </entry>
   
   <entry>
     <title>Docker部署LNMP环境</title>
-    <link href="http://yoursite.com/2020/01/25/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83/"/>
-    <id>http://yoursite.com/2020/01/25/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83/</id>
+    <link href="http://pdxblog.top/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html"/>
+    <id>http://pdxblog.top/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.271Z</updated>
     
@@ -308,17 +308,17 @@
     </summary>
     
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>KVM简介</title>
-    <link href="http://yoursite.com/2020/01/25/KVM%E7%AE%80%E4%BB%8B/"/>
-    <id>http://yoursite.com/2020/01/25/KVM%E7%AE%80%E4%BB%8B/</id>
+    <link href="http://pdxblog.top/KVM%E7%AE%80%E4%BB%8B.html"/>
+    <id>http://pdxblog.top/KVM%E7%AE%80%E4%BB%8B.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.318Z</updated>
     
@@ -331,17 +331,17 @@
     </summary>
     
     
-      <category term="KVM" scheme="http://yoursite.com/categories/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/categories/KVM/"/>
     
     
-      <category term="KVM" scheme="http://yoursite.com/tags/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/tags/KVM/"/>
     
   </entry>
   
   <entry>
     <title>KVM网络</title>
-    <link href="http://yoursite.com/2020/01/25/KVM%E7%BD%91%E7%BB%9C/"/>
-    <id>http://yoursite.com/2020/01/25/KVM%E7%BD%91%E7%BB%9C/</id>
+    <link href="http://pdxblog.top/KVM%E7%BD%91%E7%BB%9C.html"/>
+    <id>http://pdxblog.top/KVM%E7%BD%91%E7%BB%9C.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.318Z</updated>
     
@@ -354,17 +354,17 @@
     </summary>
     
     
-      <category term="KVM" scheme="http://yoursite.com/categories/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/categories/KVM/"/>
     
     
-      <category term="KVM" scheme="http://yoursite.com/tags/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/tags/KVM/"/>
     
   </entry>
   
   <entry>
     <title>ReplicaSet、DaemonSet</title>
-    <link href="http://yoursite.com/2020/01/25/ReplicaSet%E3%80%81DaemonSet/"/>
-    <id>http://yoursite.com/2020/01/25/ReplicaSet%E3%80%81DaemonSet/</id>
+    <link href="http://pdxblog.top/ReplicaSet%E3%80%81DaemonSet.html"/>
+    <id>http://pdxblog.top/ReplicaSet%E3%80%81DaemonSet.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.303Z</updated>
     
@@ -377,17 +377,17 @@
     </summary>
     
     
-      <category term="k8s" scheme="http://yoursite.com/categories/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/categories/k8s/"/>
     
     
-      <category term="k8s" scheme="http://yoursite.com/tags/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/tags/k8s/"/>
     
   </entry>
   
   <entry>
     <title>虚拟机的克隆</title>
-    <link href="http://yoursite.com/2020/01/25/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%85%8B%E9%9A%86/"/>
-    <id>http://yoursite.com/2020/01/25/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%85%8B%E9%9A%86/</id>
+    <link href="http://pdxblog.top/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%85%8B%E9%9A%86.html"/>
+    <id>http://pdxblog.top/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%85%8B%E9%9A%86.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.318Z</updated>
     
@@ -400,17 +400,17 @@
     </summary>
     
     
-      <category term="KVM" scheme="http://yoursite.com/categories/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/categories/KVM/"/>
     
     
-      <category term="KVM" scheme="http://yoursite.com/tags/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/tags/KVM/"/>
     
   </entry>
   
   <entry>
     <title>虚拟机的迁移</title>
-    <link href="http://yoursite.com/2020/01/25/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB/"/>
-    <id>http://yoursite.com/2020/01/25/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB/</id>
+    <link href="http://pdxblog.top/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB.html"/>
+    <id>http://pdxblog.top/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB.html</id>
     <published>2020-01-24T16:00:00.000Z</published>
     <updated>2020-01-25T13:07:32.334Z</updated>
     
@@ -423,17 +423,17 @@
     </summary>
     
     
-      <category term="KVM" scheme="http://yoursite.com/categories/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/categories/KVM/"/>
     
     
-      <category term="KVM" scheme="http://yoursite.com/tags/KVM/"/>
+      <category term="KVM" scheme="http://pdxblog.top/tags/KVM/"/>
     
   </entry>
   
   <entry>
     <title>Deployment</title>
-    <link href="http://yoursite.com/2020/01/24/Deployment/"/>
-    <id>http://yoursite.com/2020/01/24/Deployment/</id>
+    <link href="http://pdxblog.top/Deployment.html"/>
+    <id>http://pdxblog.top/Deployment.html</id>
     <published>2020-01-23T16:00:00.000Z</published>
     <updated>2020-01-25T13:00:44.044Z</updated>
     
@@ -446,17 +446,17 @@
     </summary>
     
     
-      <category term="k8s" scheme="http://yoursite.com/categories/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/categories/k8s/"/>
     
     
-      <category term="k8s" scheme="http://yoursite.com/tags/k8s/"/>
+      <category term="k8s" scheme="http://pdxblog.top/tags/k8s/"/>
     
   </entry>
   
   <entry>
     <title>Docker三剑客之docker-compose+wordpress的博客搭建</title>
-    <link href="http://yoursite.com/2020/01/24/Docker%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bdocker-compose+wordpress%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    <id>http://yoursite.com/2020/01/24/Docker%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bdocker-compose+wordpress%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</id>
+    <link href="http://pdxblog.top/Docker%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bdocker-compose+wordpress%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html"/>
+    <id>http://pdxblog.top/Docker%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bdocker-compose+wordpress%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html</id>
     <published>2020-01-23T16:00:00.000Z</published>
     <updated>2020-02-03T02:45:12.557Z</updated>
     
@@ -469,10 +469,10 @@
     </summary>
     
     
-      <category term="Docker" scheme="http://yoursite.com/categories/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="http://yoursite.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://pdxblog.top/tags/Docker/"/>
     
   </entry>
   

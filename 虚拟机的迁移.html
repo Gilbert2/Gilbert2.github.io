@@ -49,17 +49,20 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
 </script>
-  <meta name="description" content="直到这一刻微笑着说话为止，我至少留下了一公升眼泪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="派大星の博客">
-<meta property="og:url" content="http://pdxblog.top/categories/k8s/index.html">
+  <meta name="description" content="KVM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="虚拟机的迁移">
+<meta property="og:url" content="http://pdxblog.top/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB.html">
 <meta property="og:site_name" content="派大星の博客">
-<meta property="og:description" content="直到这一刻微笑着说话为止，我至少留下了一公升眼泪">
+<meta property="og:description" content="KVM">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-01-25T13:07:32.334Z">
 <meta property="article:author" content="派大星">
+<meta property="article:tag" content="KVM">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://pdxblog.top/categories/k8s/">
+<link rel="canonical" href="http://pdxblog.top/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB.html">
 
 
 <script id="page-configurations">
@@ -67,11 +70,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>分类: k8s | 派大星の博客</title>
+  <title>虚拟机的迁移 | 派大星の博客</title>
   
 
 
@@ -184,230 +187,172 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h1 class="collection-header">k8s
-          <small>分类</small>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="派大星">
+      <meta itemprop="description" content="直到这一刻微笑着说话为止，我至少留下了一公升眼泪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="派大星の博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          虚拟机的迁移
         </h1>
-      </div>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-25 00:00:00 / 修改时间：21:07:32" itemprop="dateCreated datePublished" datetime="2020-01-25T00:00:00+08:00">2020-01-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/KVM/" itemprop="url" rel="index">
+                    <span itemprop="name">KVM</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+            <div class="post-description">KVM</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2020</h1>
-    </div>
+        <p>虚拟机的迁移：</p>
+<p>冷迁移（静态迁移）：  //服务器需要关闭<br>kvm01：192.168.1.100<br>kvm02：192.168.1.200</p>
+<p>两台机器防火墙全部关闭，禁用selinux</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# lsmod |  grep  kvm  &#x2F;&#x2F;查看是否支持kvm</span><br><span class="line">[root@localhost ~]# systemctl  status  libvirtd  &#x2F;&#x2F;查看libvirtd服务是否正常</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>//迁移和克隆差不多，都是需要对磁盘文件和xml配置文件进行操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# scp  &#x2F;etc&#x2F;libvirt&#x2F;qemu&#x2F;test01.xml root@192.168.1.200:&#x2F;etc&#x2F;libvirt&#x2F;qemu </span><br><span class="line">[root@kvm01 ~]# scp  &#x2F;kvm-vm&#x2F;centos.raw   root@192.168.1.200:&#x2F;kvm-vm&#x2F;</span><br><span class="line">[root@kvm02 ~]# virsh  define   &#x2F;etc&#x2F;libvirt&#x2F;qemu&#x2F;test01.xml</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-17T00:00:00+08:00"
-              content="2020-02-17">
-          02-17
-        </time>
-      </div>
+<p>热迁移（动态迁移）：<br>删除所有的KVM虚拟机<br>kvm01：192.168.1.100<br>kvm02：192.168.1.200<br>NFS：192.168.1.129</p>
+<p>1）在NFS服务器上面操作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@NFS ~]# yum  -y  install  nfs-utils</span><br><span class="line">[root@NFS ~]# mkdir &#x2F;kvmshare  &#x2F;&#x2F;创建共享文件夹</span><br><span class="line">[root@NFS ~]# vim  &#x2F;etc&#x2F;exports  &#x2F;&#x2F;编辑共享文件夹权限</span><br><span class="line">[root@NFS ~]# cat &#x2F;etc&#x2F;exports</span><br><span class="line">&#x2F;kvmshare  *(rw,sync,no_root_squash)</span><br><span class="line">[root@NFS ~]# systemctl  start  rpcbind  &#x2F;&#x2F;远程传输控制协议</span><br><span class="line">[root@NFS ~]# systemctl  enable  rpcbind</span><br><span class="line">[root@NFS ~]# systemctl  start  nfs-server</span><br><span class="line">[root@NFS ~]# systemctl  enable  nfs-server</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/ConfigMap%E3%80%81Secret.html" itemprop="url">
-            <span itemprop="name">ConfigMap、Secret</span>
-          </a>
-      </h2>
+<p>//确保两台KVM服务器能看到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# showmount  -e  192.168.1.129</span><br><span class="line">[root@kvm02 ~]# showmount  -e  192.168.1.129</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </article>
+<p>2）KVM01上基于NFS服务创建虚拟机<br>添加新的存储池：<br>名称：nfsshare<br>类型：netfs<br>目标路径：/opt/nfsshare（本机挂在的目录，目录默认没有，但会自己创建）<br>主机名:192.168.1.129（nfs-server IP address）<br>源路径：/kvmshare（nfs-server上的共享目录）</p>
+<p>验证nfs服务是否正常：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# touch    &#x2F;opt&#x2F;nfsshare&#x2F;test</span><br><span class="line">[root@NFS ~]# ls  &#x2F;kvmshare&#x2F;</span><br><span class="line">test</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-12T00:00:00+08:00"
-              content="2020-02-12">
-          02-12
-        </time>
-      </div>
+<p>创建存储卷：<br>名称：centos7<br>最大容量：10G</p>
+<p>//存储池和存储卷完成之后，直接创建虚拟机，并最小化安装<br>选择之前的创建的iso镜像以及刚才创建的存储池和存储卷</p>
+<p>配置虚拟机使用bridge桥接网络，使其能够ping通外网，并且在这里我们执行一个ping百度的命令，并让他保持一直是ping着的状态，用来模拟迁移到kvm02上服务不中断：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# virsh  destroy  centos7.0</span><br><span class="line">[root@kvm01 ~]# systemctl  stop  NetworkManager</span><br><span class="line">[root@kvm01 ~]# virsh  iface-bridge ens33  br0</span><br><span class="line">[root@kvm01 ~]# virsh  edit  centos7.0</span><br><span class="line">&lt;interface type&#x3D;&#39;bridge&#39;&gt;</span><br><span class="line">&lt;mac address&#x3D;&#39;52:54:00:12:80:97&#39;&#x2F;&gt;</span><br><span class="line">&lt;source bridge&#x3D;&#39;br0&#39;&#x2F;&gt;</span><br><span class="line">[root@kvm01 ~]# virsh  start  centos7.0</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/StatefulSet.html" itemprop="url">
-            <span itemprop="name">StatefulSet</span>
-          </a>
-      </h2>
+<p>配置IP为DHCP自动获取</p>
+<p>在KVM02上操作，创建存储池：<br>名称：nfsshare<br>类型：netfs<br>目标路径：/opt/nfsshare（本机挂在的目录，目录默认没有，但会自己创建）<br>主机名:192.168.1.129（nfs-server IP address）<br>源路径：/kvmshare（nfs-server上的共享目录）<br>创建完之后会看到之前在KVM01上创建的test文件和centos.qcow2的存储卷</p>
+<p>在KVM01上连接KVM02：<br>右上角—文件—添加连接—连接到远程主机—方法：ssh—用户名：root—-主机名：192.168.1.200（KVM02的IP）<br>会提示安装openssh-askpass，直接在KVM01和KVm02上安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# yum  -y  install  openssh-askpass</span><br><span class="line">[root@kvm02 ~]# yum  -y  install  openssh-askpass</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </article>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+<p>//因为KVM01使用的是bridge br0网卡，所以我们需要在KVM02上创建同样的网卡br0，用来支持虚拟机</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm02 ~]# systemctl  stop  NetworkManager</span><br><span class="line">[root@kvm02 ~]# virsh  iface-bridge  ens33  br0</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-11T00:00:00+08:00"
-              content="2020-02-11">
-          02-11
-        </time>
-      </div>
+<p>接下来直接在virt-manager管理器中迁移就可以了，迁移完成之后，保证我么的ping命令是不中断的，就表示实验完成了<br>右键centos7.0—迁移—地址：192.168.1.200（KVM02的IP）—高级选项—-勾选允许不可靠—-迁移<br>如果出现错误解决办法：<br>把KVM01和KVM02上挂载的目录给一个777的权限，保证双方root用户有权限调用目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@kvm01 ~]# chmod  777  &#x2F;opt&#x2F;</span><br><span class="line">[root@kvm02 ~]# chmod  777  &#x2F;opt&#x2F;</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/k8s%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB.html" itemprop="url">
-            <span itemprop="name">k8s的存储类</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-02-10T16:53:18+08:00"
-              content="2020-02-10">
-          02-10
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/k8s%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96.html" itemprop="url">
-            <span itemprop="name">k8s数据持久化</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-25T00:00:00+08:00"
-              content="2020-01-25">
-          01-25
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/ReplicaSet%E3%80%81DaemonSet.html" itemprop="url">
-            <span itemprop="name">ReplicaSet、DaemonSet</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-24T00:00:00+08:00"
-              content="2020-01-24">
-          01-24
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/Deployment.html" itemprop="url">
-            <span itemprop="name">Deployment</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-24T00:00:00+08:00"
-              content="2020-01-24">
-          01-24
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/Kubernetes%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2.html" itemprop="url">
-            <span itemprop="name">Kubernetes集群部署</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-24T00:00:00+08:00"
-              content="2020-01-24">
-          01-24
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/Pod%E8%B5%84%E6%BA%90%E5%AF%B9%E8%B1%A1+%E5%81%A5%E5%BA%B7%E6%A3%80%E6%9F%A5.html" itemprop="url">
-            <span itemprop="name">Pod资源对象+健康检查</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-24T00:00:00+08:00"
-              content="2020-01-24">
-          01-24
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/k8s%E6%9E%B6%E6%9E%84%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html" itemprop="url">
-            <span itemprop="name">k8s架构、基本概念</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-24T00:00:00+08:00"
-              content="2020-01-24">
-          01-24
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/%E5%88%9B%E5%BB%BA%E8%B5%84%E6%BA%90%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F.html" itemprop="url">
-            <span itemprop="name">创建资源的两种方式</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
+<p>迁移完成后在KVM02上面查看ping命令是否中断</p>
 
     </div>
+
+    
+    
+    
+
+
+<div>
+      
+        
+      
+</div>
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/KVM/" rel="tag"># KVM</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Deployment.html" rel="prev" title="Deployment">
+      <i class="fa fa-chevron-left"></i> Deployment
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%85%8B%E9%9A%86.html" rel="next" title="虚拟机的克隆">
+      虚拟机的克隆 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
