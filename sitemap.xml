@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://pdxblog.top/Ingress.html</loc>
+    
+    <lastmod>2020-02-24T06:07:37.583Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://pdxblog.top/ConfigMap%E3%80%81Secret.html</loc>
     
     <lastmod>2020-02-17T07:16:38.374Z</lastmod>
