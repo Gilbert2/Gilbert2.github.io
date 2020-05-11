@@ -13,11 +13,12 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/mathjax/3.0.5/es5/a11y/assistive-mml.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"pdxblog.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"b2t":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"pdxblog.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"b2t":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="直到这一刻微笑着说话为止，我至少留下了一公升眼泪">
@@ -728,113 +729,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="Maisy">
-      <meta itemprop="description" content="直到这一刻微笑着说话为止，我至少留下了一公升眼泪">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Maisyの博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html" class="post-title-link" itemprop="url">Docker架构+Docker镜像分层+Dockerfile</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-25 00:00:00 / 修改时间：21:07:32" itemprop="dateCreated datePublished" datetime="2020-01-25T00:00:00+08:00">2020-01-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.7k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Docker</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-<div>
-  
-</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Docker%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -942,7 +836,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html">
+    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -956,7 +850,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html" class="post-title-link" itemprop="url">Docker的底层原理</a>
+            <a href="/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html" class="post-title-link" itemprop="url">Docker架构+Docker镜像分层+Dockerfile</a>
         </h2>
 
         <div class="post-meta">
@@ -988,8 +882,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html" itemprop="commentCount"></span>
+    <a title="valine" href="/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -999,7 +893,114 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.2k</span>
+              <span>3.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Docker</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/Docker%E6%9E%B6%E6%9E%84+Docker%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82+Dockerfile.html">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+<div>
+  
+</div>
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="Maisy">
+      <meta itemprop="description" content="直到这一刻微笑着说话为止，我至少留下了一公升眼泪">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Maisyの博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html" class="post-title-link" itemprop="url">Docker的私有仓库</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-25 00:00:00 / 修改时间：21:07:32" itemprop="dateCreated datePublished" datetime="2020-01-25T00:00:00+08:00">2020-01-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1021,7 +1022,7 @@
           <p>Docker</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html">
+              <a class="btn" href="/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1156,7 +1157,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html">
+    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -1170,7 +1171,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html" class="post-title-link" itemprop="url">Docker部署LNMP环境</a>
+            <a href="/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html" class="post-title-link" itemprop="url">Docker的底层原理</a>
         </h2>
 
         <div class="post-meta">
@@ -1202,8 +1203,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html" itemprop="commentCount"></span>
+    <a title="valine" href="/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1213,14 +1214,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.4k</span>
+              <span>2.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -1235,7 +1236,7 @@
           <p>Docker</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html">
+              <a class="btn" href="/Docker%E7%9A%84%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1436,9 +1437,11 @@
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/animejs/3.2.0/anime.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.css"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/velocity/2.0.5/velocity.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1.2.1/velocity.ui.min.js"></script>
 
 <script src="/js/utils.js"></script>
 
@@ -1476,7 +1479,7 @@
 
 <script>
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
-  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+  NexT.utils.getScript('https://cdn.bootcdn.net/ajax/libs/valine/1.4.14/detect.min.js', () => {
     var GUEST = ['nick', 'mail', 'link'];
     var guest = 'nick,mail,link';
     guest = guest.split(',').filter(item => {
