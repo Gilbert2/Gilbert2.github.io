@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"pdxblog.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"b2t":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="直到这一刻微笑着说话为止，我至少留下了一公升眼泪">
+  <meta name="description" content="var APP_ID &#x3D; ******;  &#x2F;&#x2F;输入个人LeanCloud账号AppID   var APP_KEY &#x3D; ******;  &#x2F;&#x2F;输入个人LeanCloud账号AppKey   AV.init({     appId: APP_ID,     appKey: APP_KEY   });    var query &#x3D; new AV.Query(&#39;Counter&#39;);&#x2F;&#x2F;表名">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Maisyの博客">
-<meta property="og:url" content="http://pdxblog.top/categories/KVM/index.html">
+<meta property="og:title" content="热门文章Top 10">
+<meta property="og:url" content="http://pdxblog.top/top/index.html">
 <meta property="og:site_name" content="Maisyの博客">
-<meta property="og:description" content="直到这一刻微笑着说话为止，我至少留下了一公升眼泪">
+<meta property="og:description" content="var APP_ID &#x3D; ******;  &#x2F;&#x2F;输入个人LeanCloud账号AppID   var APP_KEY &#x3D; ******;  &#x2F;&#x2F;输入个人LeanCloud账号AppKey   AV.init({     appId: APP_ID,     appKey: APP_KEY   });    var query &#x3D; new AV.Query(&#39;Counter&#39;);&#x2F;&#x2F;表名">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-11T10:28:40.226Z">
+<meta property="article:modified_time" content="2020-05-11T10:28:40.226Z">
 <meta property="article:author" content="Maisy">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://pdxblog.top/categories/KVM/">
+<link rel="canonical" href="http://pdxblog.top/top/">
 
 
 <script id="page-configurations">
@@ -43,7 +45,8 @@
   };
 </script>
 
-  <title>分类: KVM | Maisyの博客</title>
+  <title>热门文章Top 10 | Maisyの博客
+</title>
   
 
 
@@ -162,154 +165,76 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
-          <div class="content category">
+          <div class="content page posts-expand">
             
 
+    
+    
+    
+    <div class="post-block" lang="zh-CN">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">热门文章Top 10
+</h1>
+
+<div class="post-meta">
   
-  
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">KVM
-          <small>分类</small>
-        </h2>
-      </div>
+
+</div>
+
+</header>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+      
+      
+      <div class="post-body">
+          <div id="post-rank"></div>
+
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+<script>
+  var APP_ID = ******;  //输入个人LeanCloud账号AppID
+  var APP_KEY = ******;  //输入个人LeanCloud账号AppKey
+  AV.init({
+    appId: APP_ID,
+    appKey: APP_KEY
+  });
+
+  var query = new AV.Query('Counter');//表名
+  query.descending('time'); //结果按阅读次数降序排序
+  query.limit(10);  //最终只返回10条结果
+  query.find().then( response => {
+    var content = response.reduce( (accum, {attributes}) => {
+      accum += `<p><div class="prefix">热度 ${attributes.time} ℃</div><div><a href="${attributes.url}">${attributes.title}</a></div></p>`
+      return accum;
+    },"")
+    document.querySelector("#post-rank").innerHTML = content;
+  })
+  .catch( error => {
+    console.log(error);
+  });
+</script>
+
+<style type="text/css">
+  #post-rank {
+    text-align: center;
+  }
+  #post-rank .prefix {
+    color: #ff4d4f;
+  }
+</style>
+      </div>
+      
+      
+      
     </div>
+    
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-25T00:00:00+08:00"
-              content="2020-01-25">
-          01-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/KVM%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4.html" itemprop="url">
-            <span itemprop="name">KVM基本操作命令</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-25T00:00:00+08:00"
-              content="2020-01-25">
-          01-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/KVM%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F.html" itemprop="url">
-            <span itemprop="name">KVM磁盘格式</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-25T00:00:00+08:00"
-              content="2020-01-25">
-          01-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/KVM%E7%AE%80%E4%BB%8B.html" itemprop="url">
-            <span itemprop="name">KVM简介</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-25T00:00:00+08:00"
-              content="2020-01-25">
-          01-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/KVM%E7%BD%91%E7%BB%9C.html" itemprop="url">
-            <span itemprop="name">KVM网络</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-25T00:00:00+08:00"
-              content="2020-01-25">
-          01-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%85%8B%E9%9A%86.html" itemprop="url">
-            <span itemprop="name">虚拟机的克隆</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-01-25T00:00:00+08:00"
-              content="2020-01-25">
-          01-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB.html" itemprop="url">
-            <span itemprop="name">虚拟机的迁移</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-    </div>
-  </div>
-  
-  
-  
-
-  
-
+    
+    
+    
 
 
           </div>
