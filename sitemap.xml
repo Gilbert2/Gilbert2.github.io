@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>pdxblog.top/%E4%BD%BF%E7%94%A8Python%E7%9B%91%E6%8E%A7Linux%E7%B3%BB%E7%BB%9F.html</loc>
+    
+    <lastmod>2020-05-12T09:08:49.317Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>pdxblog.top/top/index.html</loc>
     
     <lastmod>2020-05-12T07:55:24.901Z</lastmod>
@@ -226,14 +233,14 @@
   </url>
   
   <url>
-    <loc>pdxblog.top/KVM%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F.html</loc>
+    <loc>pdxblog.top/KVM%E7%AE%80%E4%BB%8B.html</loc>
     
     <lastmod>2020-01-25T13:07:32.318Z</lastmod>
     
   </url>
   
   <url>
-    <loc>pdxblog.top/KVM%E7%AE%80%E4%BB%8B.html</loc>
+    <loc>pdxblog.top/KVM%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F.html</loc>
     
     <lastmod>2020-01-25T13:07:32.318Z</lastmod>
     
@@ -282,14 +289,14 @@
   </url>
   
   <url>
-    <loc>pdxblog.top/Docker%E8%B7%A8%E4%B8%BB%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%96%B9%E6%A1%88%E4%B9%8BMacVlan.html</loc>
+    <loc>pdxblog.top/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html</loc>
     
     <lastmod>2020-01-25T13:07:32.271Z</lastmod>
     
   </url>
   
   <url>
-    <loc>pdxblog.top/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html</loc>
+    <loc>pdxblog.top/Docker%E8%B7%A8%E4%B8%BB%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%96%B9%E6%A1%88%E4%B9%8BMacVlan.html</loc>
     
     <lastmod>2020-01-25T13:07:32.271Z</lastmod>
     
