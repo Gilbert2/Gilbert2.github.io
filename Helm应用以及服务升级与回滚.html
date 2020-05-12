@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"pdxblog.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"b2t":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="K8s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Helm应用以及服务升级与回滚">
+<meta property="og:url" content="http://pdxblog.top/Helm%E5%BA%94%E7%94%A8%E4%BB%A5%E5%8F%8A%E6%9C%8D%E5%8A%A1%E5%8D%87%E7%BA%A7%E4%B8%8E%E5%9B%9E%E6%BB%9A.html">
+<meta property="og:site_name" content="Maisyの博客">
+<meta property="og:description" content="K8s">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-03T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-04T12:15:12.356Z">
+<meta property="article:author" content="Maisy">
+<meta property="article:tag" content="k8s">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://pdxblog.top/Helm%E5%BA%94%E7%94%A8%E4%BB%A5%E5%8F%8A%E6%9C%8D%E5%8A%A1%E5%8D%87%E7%BA%A7%E4%B8%8E%E5%9B%9E%E6%BB%9A.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Helm应用以及服务升级与回滚 | Maisyの博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Maisyの博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Maisyの博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录生活中的点点滴滴</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-top">
+
+    <a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>top</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">49</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Helm%E5%BA%94%E7%94%A8%E4%BB%A5%E5%8F%8A%E6%9C%8D%E5%8A%A1%E5%8D%87%E7%BA%A7%E4%B8%8E%E5%9B%9E%E6%BB%9A.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="Maisy">
+      <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Maisyの博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Helm应用以及服务升级与回滚
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-03-04 00:00:00 / 修改时间：20:15:12" itemprop="dateCreated datePublished" datetime="2020-03-04T00:00:00+08:00">2020-03-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/k8s/" itemprop="url" rel="index"><span itemprop="name">k8s</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/Helm%E5%BA%94%E7%94%A8%E4%BB%A5%E5%8F%8A%E6%9C%8D%E5%8A%A1%E5%8D%87%E7%BA%A7%E4%B8%8E%E5%9B%9E%E6%BB%9A.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Helm%E5%BA%94%E7%94%A8%E4%BB%A5%E5%8F%8A%E6%9C%8D%E5%8A%A1%E5%8D%87%E7%BA%A7%E4%B8%8E%E5%9B%9E%E6%BB%9A.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+            <div class="post-description">K8s</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="Helm应用以及服务升级与回滚"><a href="#Helm应用以及服务升级与回滚" class="headerlink" title="Helm应用以及服务升级与回滚"></a>Helm应用以及服务升级与回滚</h3><p>helm：包管理工具</p>
+<p>官方提提供的仓库：<a href="https://hub.helm.sh/" target="_blank" rel="noopener">https://hub.helm.sh/</a></p>
+<p><strong>Charts</strong>：是一个Helm的程序包，它包含了运行一个kubernetes应用程序所需要的镜像、依赖关系和资源定义等</p>
+<p><strong>Release</strong>：应用程序运行charts后，得到的一个实例</p>
+<p>部署一个实例：</p>
+<p>helm install + charts -n release名称</p>
+<p><strong>根据以一个包运行一个实例</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# helm  install  stable/redis -n  redis --dry-run</span><br><span class="line">--dry-run：用来测试有没有问题，如果没有问题就可以运行</span><br><span class="line">[root@master ~]# helm  install  stable/redis -n  redis</span><br><span class="line"><span class="meta">#</span><span class="bash">这里是运行不成功的，因为他需要镜像，PV等准备工作</span></span><br></pre></td></tr></table></figure>
+
+<p>运行之后会有三部分描述</p>
+<blockquote>
+<p>1、关于这个Release的描述</p>
+<p>2、关于这个Release资源的描述</p>
+<p>3、怎么使用这个Release</p>
+</blockquote>
+<p>根据提示可以获得redis的密码，等等一些信息</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# kubectl get secret --namespace default redis-redis -o jsonpath="&#123;.data.redis-password&#125;" | base64 --decode</span><br><span class="line">rTmeGF2rcY</span><br></pre></td></tr></table></figure>
+
+<p>删除实例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# helm  delete  redis  --purge</span><br></pre></td></tr></table></figure>
+
+<p>查询chart包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# helm search mysql</span><br></pre></td></tr></table></figure>
+
+<p>运行一个实例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# helm  install  stable/mysql -n mysql</span><br></pre></td></tr></table></figure>
+
+<p>我们运行过的实例都会生成一个charts包存放在这个缓存目录下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@master archive]# pwd</span><br><span class="line">/root/.helm/cache/archive</span><br><span class="line">[root@master archive]# ls</span><br><span class="line">mysql-0.3.5.tgz  redis-1.1.15.tgz</span><br></pre></td></tr></table></figure>
+
+<p>Charts包解压目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@master archive]# tar zxf mysql-0.3.5.tgz</span><br><span class="line">[root@master archive]# tree  -C  mysql</span><br><span class="line">mysql</span><br><span class="line">├── Chart.yaml</span><br><span class="line">├── README.md</span><br><span class="line">├── templates</span><br><span class="line">│   ├── configmap.yaml</span><br><span class="line">│   ├── deployment.yaml</span><br><span class="line">│   ├── _helpers.tpl</span><br><span class="line">│   ├── NOTES.txt</span><br><span class="line">│   ├── pvc.yaml</span><br><span class="line">│   ├── secrets.yaml</span><br><span class="line">│   └── svc.yaml</span><br><span class="line">└── values.yaml</span><br></pre></td></tr></table></figure>
+
+<p><strong>Chart.yaml</strong>：这个chart包的概要信息</p>
+<p>​    name和version这两个是必填项，其他可选</p>
+<p><strong>README.md</strong>：是这个chart包的一个使用帮助文档</p>
+<p><strong>templates</strong>：chart包内各种资源对象模板</p>
+<p><strong>values.yaml</strong>：是这个chart包的默认的值，可以被template内的yaml文件使用</p>
+<p>我们在部署之前还可以提前查看这个包会有什么东西</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# helm  inspect values  stable/prometheus</span><br></pre></td></tr></table></figure>
+
+<p>除了部署实例后会生成chart包，还可以下载chart包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# helm  fetch stable/prometheus</span><br></pre></td></tr></table></figure>
+
+<p><strong>Helm部署安装一个Mysql服务</strong></p>
+<p>部署NFS服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# mkdir  /data</span><br><span class="line">[root@master ~]# vim  /etc/exports</span><br><span class="line">/data *(rw,sync,no_root_squash)</span><br></pre></td></tr></table></figure>
+
+<p>创建PV：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[root@master</span> <span class="string">~]#</span> <span class="string">vim</span>  <span class="string">nfs-pv1.yml</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">PersistentVolume</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mysqlpv</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">capacity:</span></span><br><span class="line">    <span class="attr">storage:</span> <span class="string">8Gi</span></span><br><span class="line">  <span class="attr">accessModes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">ReadWriteOnce</span></span><br><span class="line">  <span class="attr">persistentVolumeReclaimPolicy:</span> <span class="string">Recycle</span></span><br><span class="line">  <span class="attr">nfs:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">/data/mysqlpv</span></span><br><span class="line">    <span class="attr">server:</span> <span class="number">192.168</span><span class="number">.1</span><span class="number">.70</span></span><br><span class="line"><span class="string">[root@master</span> <span class="string">~]#</span> <span class="string">kubectl</span>  <span class="string">apply</span> <span class="string">-f</span>  <span class="string">nfs-pv1.yml</span> </span><br><span class="line"><span class="string">persistentvolume/mysqlpv</span> <span class="string">created</span></span><br><span class="line"><span class="string">[root@master</span> <span class="string">~]#</span> <span class="string">kubectl</span>  <span class="string">get</span> <span class="string">pv</span></span><br><span class="line"><span class="string">NAME</span>      <span class="string">CAPACITY</span>   <span class="string">ACCESS</span> <span class="string">MODES</span>   <span class="string">RECLAIM</span> <span class="string">POLICY</span>   <span class="string">STATUS</span>      <span class="string">CLAIM</span>   <span class="string">STORAGECLASS</span>   <span class="string">REASON</span>   <span class="string">AGE</span></span><br><span class="line"><span class="string">mysqlpv</span>   <span class="string">8Gi</span>        <span class="string">RWO</span>            <span class="string">Recycle</span>          <span class="string">Available</span>                                   <span class="string">16s</span></span><br><span class="line"><span class="string">[root@master</span> <span class="string">~]#</span> <span class="string">mkdir</span>  <span class="string">/data/mysqlpv</span></span><br></pre></td></tr></table></figure>
+
+<p>部署mysql实例（镜像提前准备好）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# helm  install  stable/mysql  -n  bdqn-mysql  --set  mysqlRootPassword=123.com   #创建实例，并设置密码</span><br><span class="line">[root@master ~]# kubectl  get pod</span><br><span class="line">NAME                               READY   STATUS     RESTARTS   AGE</span><br><span class="line">bdqn-mysql-mysql-7b89c7b99-kg4wf   0/1     Init:0/1   0          17s  #正在初始化</span><br><span class="line">[root@master ~]# kubectl  get pvc</span><br><span class="line">NAME               STATUS   VOLUME    CAPACITY   ACCESS MODES   STORAGECLASS   AGE</span><br><span class="line">bdqn-mysql-mysql   Bound    mysqlpv   8Gi        RWO                           48s</span><br><span class="line"><span class="meta">#</span><span class="bash">还需要一个小镜像</span></span><br><span class="line">docker pull  busybox:1.25.0</span><br><span class="line">[root@master ~]# kubectl  get pod</span><br><span class="line">NAME                               READY   STATUS    RESTARTS   AGE</span><br><span class="line">bdqn-mysql-mysql-7b89c7b99-kg4wf   1/1     Running   0          2m10s</span><br><span class="line">[root@master ~]# kubectl  get deployments.</span><br><span class="line">NAME               READY   UP-TO-DATE   AVAILABLE   AGE</span><br><span class="line">bdqn-mysql-mysql   1/1     1            1           2m13s</span><br></pre></td></tr></table></figure>
+
+<p>查看密码是否设置成功：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# kubectl get secret --namespace default bdqn-mysql-mysql -o jsonpath="&#123;.data.mysql-root-password&#125;" | base64 --decode; echo</span><br><span class="line">123.com</span><br></pre></td></tr></table></figure>
+
+<p>验证数据有没有问题：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]# kubectl  exec  -it  bdqn-mysql-mysql-7b89c7b99-kg4wf -- mysql  -u root -p123.com</span><br><span class="line"><span class="meta">mysql&gt;</span><span class="bash"> show  databases;</span></span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">4 rows in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<p><strong>在部署mysql的时候，如何开启storageclass，以及如何使用？</strong></p>
+<p>首先需要部署storageclass（存储类），让他可以自动创建PV</p>
+<blockquote>
+<p>1、需要基于NFS环境</p>
+<p>2、RBAC权限</p>
+<p>3、nfs-deployment.</p>
+<p>4、storageclass</p>
+</blockquote>
+<p>helm在创建实例的时候是基于templates模板里的内容创建的，而模板内需要的信息则是在values.yaml文件里，我们则需要修改values.yaml文件里的内容就行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@master mysql]# vim  values.yaml  </span><br><span class="line">找到storageClass，去掉注释即可</span><br><span class="line">  storageClass: "test-nfs"  #storageclass的名称</span><br><span class="line">  accessMode: ReadWriteOnce  </span><br><span class="line">  size: 8Gi</span><br></pre></td></tr></table></figure>
+
+<p>然后直接部署实例，在部署实例的时候 -f 指定这个values.yaml这个文件即可，它会根据实例的PVC自动创建PV</p>
+<p><strong>如果想将sservice资源对象的类型更改为NodePort，又应该怎么做</strong></p>
+<p>同样只需要修改values.yaml文件就行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">将类型给位NodePort即可，还可以自己指定端口</span></span><br><span class="line">  type: NodePort</span><br><span class="line">  port: 3306</span><br></pre></td></tr></table></figure>
+
+<p>在创建实例的时候只需要指定以下这个文件就行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@master mysql]# helm  install  stable/mysql  -n  bdqn-mysql  --set  mysqlRootPassword=123.com  -f  values.yaml</span><br><span class="line">[root@master mysql]# kubectl  get svc</span><br><span class="line">NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE</span><br><span class="line">bdqn-mysql-mysql   NodePort    10.104.45.139   &lt;none&gt;        3306:30165/TCP   13m</span><br><span class="line">kubernetes         ClusterIP   10.96.0.1       &lt;none&gt;        443/TCP          60d</span><br></pre></td></tr></table></figure>
+
+<p><strong>服务的升级：</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@master mysql]#  helm  upgrade --set imageTag=5.7.15  bdqn-mysql stable/mysql -f values.yaml</span><br><span class="line">[root@master mysql]# kubectl  get deployments. -o wide</span><br><span class="line">NAME        READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS   IMAGES         SELECTOR</span><br><span class="line">zhb-mysql   1/1     1            1           9m22s   zhb-mysql    mysql:5.7.15   app=zhb-mysql</span><br></pre></td></tr></table></figure>
+
+<p><strong>回滚</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看有哪些版本</span></span><br><span class="line">[root@master mysql]# helm  history  zhb</span><br><span class="line">REVISION	UPDATED                 	STATUS    	CHART      	DESCRIPTION     </span><br><span class="line">1       	Mon Mar  2 16:33:26 2020	SUPERSEDED	mysql-0.3.5	Install complete</span><br><span class="line">2       	Mon Mar  2 16:37:04 2020	DEPLOYED  	mysql-0.3.5	Upgrade complete</span><br><span class="line">回滚到1版本</span><br><span class="line">[root@master mysql]# helm  rollback  zhb  1</span><br><span class="line">Rollback was a success.</span><br><span class="line">[root@master mysql]# kubectl  get deployments. -o wide</span><br><span class="line">NAME        READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES         SELECTOR</span><br><span class="line">zhb-mysql   1/1     1            1           13m   zhb-mysql    mysql:5.7.14   app=zhb-mysql</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Maisy
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://pdxblog.top/Helm%E5%BA%94%E7%94%A8%E4%BB%A5%E5%8F%8A%E6%9C%8D%E5%8A%A1%E5%8D%87%E7%BA%A7%E4%B8%8E%E5%9B%9E%E6%BB%9A.html" title="Helm应用以及服务升级与回滚">http://pdxblog.top/Helm应用以及服务升级与回滚.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/k8s/" rel="tag"># k8s</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Helm%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF%E4%BB%A5%E5%8F%8A%E7%A7%81%E6%9C%89%E5%BA%93%E9%83%A8%E7%BD%B2.html" rel="prev" title="Helm自定义模板以及私有库部署">
+      <i class="fa fa-chevron-left"></i> Helm自定义模板以及私有库部署
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/Python%E7%9A%84%E8%AE%A4%E8%AF%86%E4%B8%8E%E5%AE%89%E8%A3%85.html" rel="next" title="Python的认识与安装">
+      Python的认识与安装 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Helm应用以及服务升级与回滚"><span class="nav-number">1.</span> <span class="nav-text">Helm应用以及服务升级与回滚</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Maisy"
+      src="/images/author.jpg">
+  <p class="site-author-name" itemprop="name">Maisy</p>
+  <div class="site-description" itemprop="description">人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">49</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Gilbert2/Gilbert2.github.io" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Gilbert2&#x2F;Gilbert2.github.io" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/weixin_45636702" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_45636702" rel="noopener" target="_blank"><i class="fab fa-crosshairs fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Maisy</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">264k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">4:01</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/canvas_sphere.min.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'yK6nF3Ng27WevBtHAbTkt8Jv-gzGzoHsz',
+      appKey     : 'DXAxzx0igQL9KzyblmtXnVkh',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
