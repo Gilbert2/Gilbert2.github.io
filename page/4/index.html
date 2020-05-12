@@ -14,10 +14,11 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"pdxblog.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"pdxblog.top","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"b2t":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
@@ -117,9 +118,29 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
+        <li class="menu-item menu-item-top">
+
+    <a href="/top/" rel="section"><i class="fa fa-signal fa-fw"></i>top</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">49</span></a>
 
   </li>
   </ul>
@@ -152,7 +173,7 @@
     <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/author.jpg">
       <meta itemprop="name" content="Maisy">
       <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
     </span>
@@ -186,7 +207,21 @@
                 </span>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Docker%E9%83%A8%E7%BD%B2LNMP%E7%8E%AF%E5%A2%83.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -241,7 +276,7 @@
     <link itemprop="mainEntityOfPage" href="http://pdxblog.top/KVM%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/author.jpg">
       <meta itemprop="name" content="Maisy">
       <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
     </span>
@@ -275,7 +310,21 @@
                 </span>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/KVM%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/KVM%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -330,7 +379,7 @@
     <link itemprop="mainEntityOfPage" href="http://pdxblog.top/KVM%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/author.jpg">
       <meta itemprop="name" content="Maisy">
       <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
     </span>
@@ -364,7 +413,21 @@
                 </span>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/KVM%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/KVM%E7%A3%81%E7%9B%98%E6%A0%BC%E5%BC%8F.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -416,99 +479,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/KVM%E7%BD%91%E7%BB%9C.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Maisy">
-      <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Maisyの博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/KVM%E7%BD%91%E7%BB%9C.html" class="post-title-link" itemprop="url">KVM网络</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-25 00:00:00 / 修改时间：21:07:32" itemprop="dateCreated datePublished" datetime="2020-01-25T00:00:00+08:00">2020-01-25</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/KVM/" itemprop="url" rel="index"><span itemprop="name">KVM</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>KVM</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/KVM%E7%BD%91%E7%BB%9C.html">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://pdxblog.top/KVM%E7%AE%80%E4%BB%8B.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/author.jpg">
       <meta itemprop="name" content="Maisy">
       <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
     </span>
@@ -542,7 +516,21 @@
                 </span>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/KVM%E7%AE%80%E4%BB%8B.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/KVM%E7%AE%80%E4%BB%8B.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -594,10 +582,113 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/KVM%E7%BD%91%E7%BB%9C.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="Maisy">
+      <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Maisyの博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/KVM%E7%BD%91%E7%BB%9C.html" class="post-title-link" itemprop="url">KVM网络</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-25 00:00:00 / 修改时间：21:07:32" itemprop="dateCreated datePublished" datetime="2020-01-25T00:00:00+08:00">2020-01-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/KVM/" itemprop="url" rel="index"><span itemprop="name">KVM</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/KVM%E7%BD%91%E7%BB%9C.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/KVM%E7%BD%91%E7%BB%9C.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>KVM</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/KVM%E7%BD%91%E7%BB%9C.html">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://pdxblog.top/ReplicaSet%E3%80%81DaemonSet.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/author.jpg">
       <meta itemprop="name" content="Maisy">
       <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
     </span>
@@ -631,7 +722,21 @@
                 </span>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/ReplicaSet%E3%80%81DaemonSet.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/ReplicaSet%E3%80%81DaemonSet.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -686,7 +791,7 @@
     <link itemprop="mainEntityOfPage" href="http://pdxblog.top/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%85%8B%E9%9A%86.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/author.jpg">
       <meta itemprop="name" content="Maisy">
       <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
     </span>
@@ -720,7 +825,21 @@
                 </span>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%85%8B%E9%9A%86.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%85%8B%E9%9A%86.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -775,7 +894,7 @@
     <link itemprop="mainEntityOfPage" href="http://pdxblog.top/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/author.jpg">
       <meta itemprop="name" content="Maisy">
       <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
     </span>
@@ -809,7 +928,21 @@
                 </span>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E8%BF%81%E7%A7%BB.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -864,7 +997,7 @@
     <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Deployment.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/author.jpg">
       <meta itemprop="name" content="Maisy">
       <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
     </span>
@@ -904,7 +1037,21 @@
                 </span>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/Deployment.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Deployment.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -956,10 +1103,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Docker%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96.html">
+    <link itemprop="mainEntityOfPage" href="http://pdxblog.top/Docker%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bdocker-compose+wordpress%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/author.jpg">
       <meta itemprop="name" content="Maisy">
       <meta itemprop="description" content="人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生">
     </span>
@@ -970,7 +1117,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Docker%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96.html" class="post-title-link" itemprop="url">Docker数据持久化</a>
+            <a href="/Docker%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bdocker-compose+wordpress%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" class="post-title-link" itemprop="url">Docker三剑客之docker-compose+wordpress的博客搭建</a>
         </h2>
 
         <div class="post-meta">
@@ -987,7 +1134,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-25 21:07:32" itemprop="dateModified" datetime="2020-01-25T21:07:32+08:00">2020-01-25</time>
+                <time title="修改时间：2020-02-03 10:45:12" itemprop="dateModified" datetime="2020-02-03T10:45:12+08:00">2020-02-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -999,20 +1146,34 @@
                 </span>
             </span>
 
-          <br>
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/Docker%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bdocker-compose+wordpress%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Docker%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bdocker-compose+wordpress%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.8k</span>
+              <span>2.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -1027,7 +1188,7 @@
           <p>Docker</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/Docker%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96.html">
+              <a class="btn" href="/Docker%E4%B8%89%E5%89%91%E5%AE%A2%E4%B9%8Bdocker-compose+wordpress%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1108,6 +1269,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Maisy"
+      src="/images/author.jpg">
   <p class="site-author-name" itemprop="name">Maisy</p>
   <div class="site-description" itemprop="description">人的一生就是一个储蓄的过程，在奋斗的时候储存了希望；在耕耘的时候储存了一粒种子；在旅行的时候储存了风景；在微笑的时候储存了快乐。聪明的人善于储蓄，在漫长而短暂的人生旅途中，学会储蓄每一个闪光的瞬间，然后用它们酿成一杯美好的回忆，在四季的变幻与交替之间，散发浓香，珍藏一生</div>
 </div>
@@ -1122,16 +1285,29 @@
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
+          
         <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
+          
         <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Gilbert2/Gilbert2.github.io" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Gilbert2&#x2F;Gilbert2.github.io" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/weixin_45636702" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_45636702" rel="noopener" target="_blank"><i class="fab fa-crosshairs fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
@@ -1153,7 +1329,7 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2019 – 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -1163,17 +1339,39 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
+      <span class="post-meta-item-text">站点总字数：</span>
     <span title="站点总字数">264k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     <span title="站点阅读时长">4:01</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -1188,6 +1386,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -1202,6 +1402,8 @@
 <script src="/js/next-boot.js"></script>
 
 
+  <script defer src="/lib/three/three.min.js"></script>
+    <script defer src="/lib/three/canvas_sphere.min.js"></script>
 
 
   
@@ -1223,6 +1425,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'yK6nF3Ng27WevBtHAbTkt8Jv-gzGzoHsz',
+      appKey     : 'DXAxzx0igQL9KzyblmtXnVkh',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
