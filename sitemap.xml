@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://pdxblog.top/Nginx%E4%BC%98%E5%8C%96%E4%B8%8E%E9%98%B2%E7%9B%97%E9%93%BE+%E5%8D%95%E6%9C%BA%E9%83%A8%E7%BD%B2LNMP.html</loc>
+    
+    <lastmod>2020-06-13T03:38:03.561Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pdxblog.top/Nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E7%BC%93%E5%AD%98%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9E%84%E5%BB%BA.html</loc>
     
-    <lastmod>2020-06-11T05:30:53.138Z</lastmod>
+    <lastmod>2020-06-11T05:32:37.243Z</lastmod>
     
   </url>
   
@@ -296,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://pdxblog.top/KVM%E7%BD%91%E7%BB%9C.html</loc>
+    <loc>https://pdxblog.top/KVM%E7%AE%80%E4%BB%8B.html</loc>
     
     <lastmod>2020-01-25T13:07:32.318Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://pdxblog.top/KVM%E7%AE%80%E4%BB%8B.html</loc>
+    <loc>https://pdxblog.top/KVM%E7%BD%91%E7%BB%9C.html</loc>
     
     <lastmod>2020-01-25T13:07:32.318Z</lastmod>
     
@@ -317,14 +324,14 @@
   </url>
   
   <url>
-    <loc>https://pdxblog.top/ReplicaSet%E3%80%81DaemonSet.html</loc>
+    <loc>https://pdxblog.top/k8s%E6%9E%B6%E6%9E%84%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html</loc>
     
     <lastmod>2020-01-25T13:07:32.303Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://pdxblog.top/k8s%E6%9E%B6%E6%9E%84%E3%80%81%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5.html</loc>
+    <loc>https://pdxblog.top/ReplicaSet%E3%80%81DaemonSet.html</loc>
     
     <lastmod>2020-01-25T13:07:32.303Z</lastmod>
     
@@ -359,6 +366,13 @@
   </url>
   
   <url>
+    <loc>https://pdxblog.top/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html</loc>
+    
+    <lastmod>2020-01-25T13:07:32.256Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://pdxblog.top/Docker%E7%9A%84%E7%9B%91%E6%8E%A7.html</loc>
     
     <lastmod>2020-01-25T13:07:32.256Z</lastmod>
@@ -367,13 +381,6 @@
   
   <url>
     <loc>https://pdxblog.top/Docker%E7%BD%91%E7%BB%9C.html</loc>
-    
-    <lastmod>2020-01-25T13:07:32.256Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://pdxblog.top/Docker%E7%9A%84%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html</loc>
     
     <lastmod>2020-01-25T13:07:32.256Z</lastmod>
     
